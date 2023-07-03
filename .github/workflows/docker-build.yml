@@ -1,12 +1,12 @@
 name: docker image build and push
 on: [push]
-Jobs:
+jobs:
   Docker-Build-Push:
-runs-on: ubuntu-latest
-steps:
+  runs-on: ubuntu-latest
+  steps:
   - name: check out repository code
     uses: actions/checkout@v2
-      - name: docker image build
-        Run: docker build -t xiaopeng163/flask-redis:latest .
+      -name: check out repository code
+        Run: docker build -t xiaopeng163/flask-redis:latest
       - name: list docker image
         Run: docker image ls
