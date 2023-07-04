@@ -21,7 +21,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       -
-        name: list docker image
+        name: PRE list docker image
         run: docker image ls
       -
         name: Build and push
@@ -31,3 +31,6 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: dockerchun/flask-redis_new:latest
+      -
+        name: POST list docker image
+        run: docker image ls
