@@ -30,7 +30,7 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: dockerchun/flask-redis_A:latest
+          tags: dockerchun/flask-redis_a:latest
       -
         name: POST list docker image
         run: docker image ls
