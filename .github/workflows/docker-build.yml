@@ -1,0 +1,18 @@
+name: Docker image buildx and push
+on: [push]
+jobs:
+  Docker-Build-Push:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: PRE list docker image
+        run: docker image ls
+      -
+        name: docker image build
+        run: docker build -t dockerchun/flask-redis_a:latest11 .
+      -
+        name: POST list docker image
+        run: docker image ls
